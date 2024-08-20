@@ -1,7 +1,7 @@
 .header {
     display: grid;
     grid-template-columns: 392px 1fr;
-    margin: 105px 24px 100px 24px;
+    margin: 97px 24px 94px 24px;
     padding-left: 26px;
     padding-right: 26px;
     font-size: 18px;
@@ -18,6 +18,7 @@
     list-style-position: outside;
     white-space: nowrap;
     text-align: center;
+    text-underline-offset: 3px;
 }
 
 .header__links-list-item {
@@ -43,13 +44,15 @@
 .header__address {
     justify-self: end;
     font-style: normal;
+    line-height: 1.4em;
     padding-right: 36px;
+    text-underline-offset: 4px;
 }
 
 .cover {
     position: relative;
     width: 100%;
-    margin-bottom: 188px;
+    margin-bottom: 192px;
     background-image: url(../images/cover.jpg);
     background-size: cover;
     background-position: center;
@@ -68,10 +71,10 @@
 .cover__title {
     padding-top: 165px;
     margin-left: 50px;
-    margin-right: 8px;
-    font-size: 63px;
-    font-weight: bold;
-    line-height: 121px;
+    margin-right: 50px;
+    font-size: 66px;
+    font-weight: 700;
+    line-height: 122px;
     text-transform: uppercase;
 }
 
@@ -83,6 +86,7 @@
 .aligned-text_center {
     text-align: center;
     display: block;
+    padding-right: 55px;
 }
 
 .aligned-text_right {
@@ -91,7 +95,11 @@
 }
 
 .letter-spacing-extended {
-    letter-spacing: 0.7em;
+    letter-spacing: 0.5em;
+}
+
+.letter-spacing-more-extended {
+    letter-spacing: 0.6em;
 }
 
 .no-letter-spacing {
@@ -99,7 +107,7 @@
 }
 
 .cover__description {
-    margin-top: 130px;
+    margin-top: 126px;
     padding-left: 32px;
     padding-bottom: 51px;
     display: flex;
@@ -108,19 +116,21 @@
 }
 
 .cover__description-text {
-    word-spacing: 0.8em;
+    margin-left: 5px;
+    word-spacing: 0.85em;
     text-transform: uppercase;
     font-size: 22px;
 }
 
 .bet-button {
+    margin-right: 9px;
     background-color: transparent;
-    font-style: Raleway, sans-serif;
+    font-family: Raleway, sans-serif;
     font-size: 22px;
     font-weight: normal;
     color: white;
     text-transform: uppercase;
-    padding: 12px 31px;
+    padding: 11px 32px;
     border-style: solid;
     border-color: white;
     border-width: 1px;
@@ -129,7 +139,7 @@
 .lots {
     margin-left: 24px;
     margin-right: 24px;
-    margin-bottom: 187px;
+    margin-bottom: 184px;
 }
 
 .lots__heading {
@@ -140,15 +150,24 @@
 }
 
 .lots__card-list {
+    display: flex;
+    flex-wrap: wrap;
     list-style: none;
     columns: 3;
     gap: 25px;
-    margin-bottom: 27px;
+    margin-bottom: 30px;
     color: white;
 }
 
+.lots__card-list-item {
+    min-height: 563px;
+    width: 334px;
+}
+
 .card {
-    background-image: url(../images/card-lot-03.jpg);
+    display: block;
+    height: 100%;
+    width: 100%;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -168,13 +187,12 @@
 }
 
 .card__description {
-    min-height: 563px;
+    height: 100%;
+    width: 100%;
     padding: 51px 40px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    height: 100%;
-    width: 100%;
 }
 
 .card__title {
@@ -193,24 +211,24 @@
 .lots__look-more-link {
     margin-left: 40px;
     font-size: 20px;
-    text-underline-offset: 5px;
+    line-height: 21px;
+    text-underline-offset: 4px;
 }
 
 .about {
     margin-left: 24px;
     margin-right: 24px;
-    margin-bottom: 180px;
+    margin-bottom: 182px;
     padding-right: 5px;
     display: grid;
     grid-template: auto auto / auto auto;
     column-gap: 25px;
     align-items: center;
-    line-height: 24px;
     font-size: 20px;
 }
 
 .about__logo {
-    margin: 0px 47px 0px 47px;
+    margin: 0 47px 0 47px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -228,13 +246,34 @@
     font-weight: bold;
 }
 
-.about__text p {
-    margin-top: 25px;
+.about__text {
+    grid-column-start: 2;
+    margin-top: 4px;
+    line-height: 24px;
+    letter-spacing: 0.01em;
     font-size: 20px;
 }
 
+
+.about__text-spacing-zero {
+    letter-spacing: 0;
+}
+
+.about__text-spacing-two {
+    letter-spacing: 0.02em;
+}
+
+.about__text-spacing-minus-one {
+    letter-spacing: -0.01em;
+}
+
+
+.about__text p {
+    margin-top: 25px;
+}
+
 p.start-line {
-    margin-top: 5px;
+    margin-top: 0;
 }
 
 .footer {
@@ -249,6 +288,7 @@ p.start-line {
 .footer__address {
     font-style: normal;
     line-height: 24px;
+    text-underline-offset: 4px;
 }
 
 .footer__menu-list {
@@ -257,8 +297,13 @@ p.start-line {
     text-align: center;
 }
 
+.footer__menu-link_active {
+    text-decoration: none;
+}
+
 .footer__menu-link {
     text-decoration: underline;
+    text-underline-offset: 4px;
 }
 
 .footer__social-list {
